@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>wellcome to our web</title>
+        <style>
+            @media (max-width: 768px) {
+                
+            
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: white;
+                font-size: 18px;
+                align-content: center;
+                
+            }
+        }
+        #detail {
+            width: 30%;
+            height: 70%;
+            margin-left: 30%;
+            border: 1px solid black;
+            
+            
+        }
+        input {
+            margin-left: 20%;
+            margin-top: 4%;
+        }
+        button {
+            margin-left: 20%;
+            margin-top: 4%;
+        }
+        a {
+            margin-left: 20%;
+        }
+        h3 {
+            margin-left: 20%;
+        }
+        </style>
+    </head>
+    <body>
+        
+        <div id="detail">
+            <h3>register your account</h3>
+            <form method="POST">
+                <input id="username" name="username" type="text" placeholder="username" required>
+                <br>
+                <input name="password" type="password" placeholder="enter password" required>
+                <br>
+                <button type="submit">register</button>
+                <br>
+                <a href="/">login?</a>
+            </form>
+        </div>
+        
+    </body>
+</html>
