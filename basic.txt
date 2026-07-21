@@ -1,0 +1,277 @@
+# Flask Project Setup Guide (Windows)
+
+## Step 1: Project Folder Banao
+
+```powershell
+mkdir PROJECT_NAME
+cd PROJECT_NAME
+```
+
+Example:
+
+```powershell
+mkdir FlaskSocial
+cd FlaskSocial
+```
+
+---
+
+## Step 2: Virtual Environment Banao
+
+```powershell
+python -m venv .venv
+```
+
+---
+
+## Step 3: Virtual Environment Activate Karo
+
+### PowerShell
+
+```powershell
+(Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned)
+```
+
+Phir:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Agar activate ho gaya to prompt kuch is tarah dikhega:
+
+```text
+(.venv) PS D:\FlaskSocial>
+```
+
+---
+
+## Step 4: Required Packages Install Karo
+
+```powershell
+pip install flask
+```
+
+Authentication ke liye:
+
+```powershell
+pip install flask-jwt-extended
+```
+
+Database:
+
+```powershell
+pip install flask-sqlalchemy
+```
+
+Realtime:
+
+```powershell
+pip install flask-socketio
+```
+
+Server:
+
+```powershell
+pip install eventlet
+```
+
+Password Hash:
+
+```powershell
+pip install werkzeug
+```
+
+Agar sab ek sath install karna ho:
+
+```powershell
+pip install flask flask-jwt-extended flask-sqlalchemy flask-socketio eventlet werkzeug
+```
+
+---
+
+## Step 5: requirements.txt Banao
+
+```powershell
+pip freeze > requirements.txt
+```
+
+---
+
+## Step 6: Git Initialize Karo
+
+```powershell
+git init
+```
+
+Branch rename:
+
+```powershell
+git branch -M main
+```
+
+---
+
+## Step 7: .gitignore File Banao
+
+`.gitignore` me ye likho:
+
+```text
+.venv/
+__pycache__/
+*.pyc
+*.db
+.env
+.vscode/
+```
+
+---
+
+## Step 8: Basic Folder Structure Banao
+
+```text
+PROJECT_NAME/
+│
+├── app.py
+├── requirements.txt
+├── .gitignore
+├── README.md
+│
+├── templates/
+├── static/
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+├── routes/
+├── services/
+├── repositories/
+├── validators/
+├── models/
+├── utils/
+└── database.py
+```
+
+---
+
+## Step 9: README.md Banao
+
+Basic project description likho.
+
+---
+
+## Step 10: First Git Commit
+
+```powershell
+git add .
+```
+
+```powershell
+git commit -m "Initial project setup"
+```
+
+---
+
+## Step 11: GitHub Repository Connect Karo
+
+```powershell
+git remote add origin YOUR_REPOSITORY_URL
+```
+
+Example:
+
+```powershell
+git remote add origin https://github.com/USERNAME/REPOSITORY.git
+```
+
+---
+
+## Step 12: GitHub Push
+
+```powershell
+git push -u origin main
+```
+
+---
+
+# Daily Workflow
+
+Code likhne ke baad:
+
+```powershell
+git status
+```
+
+```powershell
+git add .
+```
+
+```powershell
+git commit -m "Describe the feature"
+```
+
+```powershell
+git push
+```
+
+---
+
+# Jab Dusre Computer Ya Future Me Project Open Karna Ho
+
+Virtual environment activate karo:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Agar `.venv` nahi hai:
+
+```powershell
+python -m venv .venv
+```
+
+Activate karo:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Requirements install karo:
+
+```powershell
+pip install -r requirements.txt
+```
+
+Project run karo:
+
+```powershell
+python app.py
+```
+
+---
+
+# Useful Commands
+
+Current packages:
+
+```powershell
+pip list
+```
+
+Package install:
+
+```powershell
+pip install PACKAGE_NAME
+```
+
+Requirements update:
+
+```powershell
+pip freeze > requirements.txt
+```
+
+Deactivate virtual environment:
+
+```powershell
+deactivate
+```
